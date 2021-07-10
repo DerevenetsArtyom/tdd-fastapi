@@ -9,3 +9,6 @@ flake:
 
 
 lint: black flake isort
+
+testing:
+	docker-compose run --rm web python -m pytest
