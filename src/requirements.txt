@@ -4,3 +4,6 @@ pytest==6.2.4
 requests==2.25.1
 tortoise-orm==0.17.5
 uvicorn==0.14.0
+isort==5.9.2
+flake8==3.9.2
+black==21.6b0

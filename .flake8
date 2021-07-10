@@ -1,0 +1,10 @@
+[flake8]
+    max-line-length = 120
+    ignore = W605
+    exclude =
+        # No need to traverse our git and github directory
+        .git,
+        .github,
+        # There's no value in checking cache directories
+        __pycache__,
+        env
