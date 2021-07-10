@@ -1,11 +1,10 @@
 import os
 
+import pytest
 from starlette.testclient import TestClient
 
-import pytest
-
 from app import main
-from app.config import get_settings, Settings
+from app.config import Settings, get_settings
 
 
 def get_settings_override():
