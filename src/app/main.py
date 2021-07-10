@@ -13,7 +13,7 @@ def create_application():
         application,
         db_url=os.getenv("DATABASE_URL"),
         modules={"models": ["app.models.tortoise"]},
-        generate_schemas=True,
+        generate_schemas=False,
         add_exception_handlers=True,
     )
 
