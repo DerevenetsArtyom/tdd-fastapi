@@ -4,4 +4,4 @@ Dockerfile
 Dockerfile.prod
 .coveragerc
 .coverage
-htmlcov
+htmlcov/

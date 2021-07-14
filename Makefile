@@ -1,11 +1,11 @@
 black:
-	@black --line-length 120 --exclude "\.git|\.github|\env" .
+	@black --line-length 120 --exclude "\.git|\.github|\env" src/
 
 isort:
-	@isort .
+	@isort src/
 
 flake:
-	@flake8 .
+	@flake8 --config src/.flake8
 
 
 lint: black flake isort
