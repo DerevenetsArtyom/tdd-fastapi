@@ -25,3 +25,11 @@ async def get_all() -> List:
 async def delete(summary_id: int) -> int:
     summary = await TextSummary.filter(id=summary_id).first().delete()
     return summary
+
+
+async def put(summary_id: int, payload: SummaryPayloadSchema) -> Union[dict, None]:
+    summary = await TextSummary.filter(id=summary_id).update(url=payload.url, summary=payload.summary)
+    if summary:
+        updated_summary = await TextSummary.filter(id=summary_id).first().values()
+        return updated_summary[0]
+    return None
