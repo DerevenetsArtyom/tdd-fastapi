@@ -16,6 +16,10 @@ def test_create_summary_invalid_json(test_app):
         "detail": [{"loc": ["body", "url"], "msg": "field required", "type": "value_error.missing"}]
     }
 
+    response = test_app.post("/summaries/", data=json.dumps({"url": "invalid://url"}))
+    assert response.status_code == 422
+    assert response.json()["detail"][0]["msg"] == "URL scheme not permitted"
+
 
 def test_read_summary(test_app_with_db):
     response = test_app_with_db.post("/summaries/", data=json.dumps({"url": "https://foo.bar"}))
