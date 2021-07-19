@@ -7,7 +7,19 @@ from app.api import crud, summaries
 
 
 def test_create_summary(test_app, monkeypatch):
-    pass
+    test_request_payload = {"url": "https://foo.bar"}
+    test_response_payload = {"id": 1, "url": "https://foo.bar"}
+
+    async def mock_post(payload):
+        created_summary_id = 1
+        return created_summary_id
+
+    monkeypatch.setattr(crud, "post", mock_post)
+
+    response = test_app.post("/summaries/", data=json.dumps(test_request_payload))
+
+    assert response.status_code == 201
+    assert response.json() == test_response_payload
 
 
 def test_create_summaries_invalid_json(test_app):
@@ -31,15 +43,58 @@ def test_create_summaries_invalid_json(test_app):
 
 
 def test_read_summary(test_app, monkeypatch):
-    pass
+    test_data = {
+        "id": 1,
+        "url": "https://foo.bar",
+        "summary": "summary",
+        "created_at": datetime.utcnow().isoformat(),
+    }
+
+    async def mock_get(id):
+        return test_data
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    response = test_app.get("/summaries/1/")
+    assert response.status_code == 200
+    assert response.json() == test_data
 
 
 def test_read_summary_incorrect_id(test_app, monkeypatch):
-    pass
+    async def mock_get(id):
+        return None
+
+    monkeypatch.setattr(crud, "get", mock_get)
+
+    response = test_app.get("/summaries/999/")
+    assert response.status_code == 404
+    assert response.json()["detail"] == "Summary not found"
 
 
 def test_read_all_summaries(test_app, monkeypatch):
-    pass
+    test_data = [
+        {
+            "id": 1,
+            "url": "https://foo.bar",
+            "summary": "summary",
+            "created_at": datetime.utcnow().isoformat(),
+        },
+        {
+            "id": 2,
+            "url": "https://testdrivenn.io",
+            "summary": "summary",
+            "created_at": datetime.utcnow().isoformat(),
+        },
+    ]
+
+    async def mock_get_all():
+        return test_data
+
+    monkeypatch.setattr(crud, "get_all", mock_get_all)
+
+    response = test_app.get("/summaries/")
+    assert response.status_code == 200
+    assert response.json() == test_data
 
 
 def test_remove_summary(test_app, monkeypatch):
