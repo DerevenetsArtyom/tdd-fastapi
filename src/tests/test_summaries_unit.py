@@ -3,7 +3,7 @@ from datetime import datetime
 
 import pytest
 
-from app.api import crud, summaries
+from app.api import crud
 
 
 def test_create_summary(test_app, monkeypatch):
@@ -130,7 +130,22 @@ def test_remove_summary_incorrect_id(test_app, monkeypatch):
 
 
 def test_update_summary(test_app, monkeypatch):
-    pass
+    test_request_payload = {"url": "https://foo.bar", "summary": "updated"}
+    test_response_payload = {
+        "id": 1,
+        "url": "https://foo.bar",
+        "summary": "updated",
+        "created_at": datetime.utcnow().isoformat(),
+    }
+
+    async def mock_put(id, payload):
+        return test_response_payload
+
+    monkeypatch.setattr(crud, "put", mock_put)
+
+    response = test_app.put("/summaries/1/", data=json.dumps(test_request_payload))
+    assert response.status_code == 200
+    assert response.json() == test_response_payload
 
 
 @pytest.mark.parametrize(
@@ -148,7 +163,7 @@ def test_update_summary(test_app, monkeypatch):
             422,
             [
                 {
-                    "loc": ["path", "id"],
+                    "loc": ["path", "summary_id"],
                     "msg": "ensure this value is greater than 0",
                     "type": "value_error.number.not_gt",
                     "ctx": {"limit_value": 0},
@@ -187,7 +202,14 @@ def test_update_summary(test_app, monkeypatch):
     ],
 )
 def test_update_summary_invalid(test_app, monkeypatch, summary_id, payload, status_code, detail):
-    pass
+    async def mock_put(id, payload):
+        return None
+
+    monkeypatch.setattr(crud, "put", mock_put)
+
+    response = test_app.put(f"/summaries/{summary_id}/", data=json.dumps(payload))
+    assert response.status_code == status_code
+    assert response.json()["detail"] == detail
 
 
 def test_update_summary_invalid_url(test_app):
