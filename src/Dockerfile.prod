@@ -1,3 +1,38 @@
+###########
+# BUILDER #
+###########
+
+# pull official base image
+FROM python:3.8.11-slim-buster as builder
+
+# install system dependencies
+RUN apt-get update \
+  && apt-get -y install netcat gcc postgresql \
+  && apt-get clean
+
+# set working directory
+WORKDIR /usr/src/app
+
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# install dependencies
+RUN pip install --upgrade pip
+COPY ./requirements.txt .
+RUN pip wheel --no-cache-dir --no-deps --wheel-dir /usr/src/app/wheels -r requirements.txt
+
+# lint
+COPY . /usr/src/app/
+RUN pip install black==21.6b0 flake8==3.9.2 isort==5.9.2
+RUN black --line-length 120 --exclude "\.git|\.github|\env" --check .
+RUN flake8 --config .flake8 .
+RUN isort . --check-only
+
+#########
+# FINAL #
+#########
+
 # pull official base image
 FROM python:3.8.11-slim-buster
 
@@ -24,9 +59,10 @@ RUN apt-get update \
   && apt-get clean
 
 # install python dependencies
+COPY --from=builder /usr/src/app/wheels /wheels
+COPY --from=builder /usr/src/app/requirements.txt .
 RUN pip install --upgrade pip
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install --no-cache /wheels/*
 RUN pip install "uvicorn[standard]==0.14.0"
 
 # add app
