@@ -17,11 +17,11 @@ jobs:
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Pull image
+      - name: Pull images
         run: |
           docker pull ${{ env.IMAGE }}-builder:latest || true
           docker pull ${{ env.IMAGE }}-final:latest || true
-      - name: Build image
+      - name: Build images
         run: |
           docker build \
             --target builder \
@@ -34,7 +34,7 @@ jobs:
             --tag ${{ env.IMAGE }}-final:latest \
             --file ./src/Dockerfile.prod \
             "./src"
-      - name: Push image
+      - name: Push images
         run: |
           docker push ${{ env.IMAGE }}-builder:latest
           docker push ${{ env.IMAGE }}-final:latest
@@ -50,7 +50,7 @@ jobs:
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Pull image
+      - name: Pull images
         run: |
           docker pull ${{ env.IMAGE }}-builder:latest || true
           docker pull ${{ env.IMAGE }}-final:latest || true
@@ -89,11 +89,11 @@ jobs:
         run: echo ${GITHUB_TOKEN} | docker login -u ${GITHUB_ACTOR} --password-stdin docker.pkg.github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Pull image
+      - name: Pull images
         run: |
           docker pull ${{ env.IMAGE }}-builder:latest || true
           docker pull ${{ env.IMAGE }}-final:latest || true
-      - name: Build image
+      - name: Build images
         run: |
           docker build \
             --target builder \
@@ -112,7 +112,7 @@ jobs:
         env:
           HEROKU_AUTH_TOKEN: ${{ secrets.HEROKU_AUTH_TOKEN }}
       - name: Push to the registry
-        run: docker push ${{ env.HEROKU_REGISTRY_IMAGE }}
+        run: docker push ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
       - name: Set environment variables
         run: |
           echo "HEROKU_REGISTRY_IMAGE=${{ env.HEROKU_REGISTRY_IMAGE }}" >> $GITHUB_ENV
