@@ -6,7 +6,7 @@
 - [About](#about)
   - [Objectives achieved in the project](#objectives-achieved-in-the-project)
   - [Tools and technologies](#tools-and-technologies)
-  - [Project structure](#project-structure)
+  - [Endpoints](#endpoints)
 - [Usage](#usage)
     - [Docs](#docs)
     - [Access the database via psql](#access-the-database-via-psql)
@@ -62,3 +62,15 @@ This project uses a variety of technologies and services:
     - [GitHub Actions](https://github.com/features/actions)
     - [GitHub Packages](https://github.com/features/packages)
     - [Heroku](https://dashboard.heroku.com/)
+
+### Endpoints
+
+| Endpoint         | HTTP Method     | CRUD Method     | Result               |
+|------------------|-----------------|-----------------|----------------------|
+| `/summaries`     | **GET**         | **READ**        | get all summaries    |
+| `/summaries/:id` | **GET**         | **READ**        | get a single summary |
+| `/summaries`     | **POST**        | **CREATE**      | add a summary        |
+| `/summaries/:id` | **PUT**         | **UPDATE**      | update a summary     |
+| `/summaries/:id` | **DELETE**      | **DELETE**      | delete a summary     |
+| `/ping`          | **GET**         |     ------      | get test json        |
+| `/docs`          | **GET**         |     ------      | get the docs         |
