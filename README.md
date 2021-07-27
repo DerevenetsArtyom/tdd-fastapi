@@ -2,19 +2,21 @@
 
 ![Continuous Integration and Delivery](https://github.com/DerevenetsArtyom/fastapi-tdd/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
 
+* https://secret-dusk-86918.herokuapp.com/docs
+* https://secret-dusk-86918.herokuapp.com/summaries/
+* https://secret-dusk-86918.herokuapp.com/summaries/4/
+
 ## Table of contents
 - [About](#about)
   - [Objectives achieved in the project](#objectives-achieved-in-the-project)
   - [Tools and technologies](#tools-and-technologies)
   - [Endpoints](#endpoints)
 - [Usage](#usage)
-    - [Docs](#docs)
-    - [Access the database via psql](#access-the-database-via-psql)
 - [Tests](#tests)
 
 ## About
 
-**fastapi-tdd** is a code-along (with some differences) to the course **[Test-Driven Development with FastAPI and Docker](https://testdriven.io/courses/tdd-fastapi/)** by Michael Herman.  
+**fastapi-tdd** is a code-along (with some differences) to the course **[Test-Driven Development with FastAPI and Docker](https://testdriven.io/courses/tdd-fastapi/)** by Michael Herman.
 Link to [original repo](https://github.com/testdrivenio/fastapi-tdd-docker).
 
 ### Objectives achieved in the project
