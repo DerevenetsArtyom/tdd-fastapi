@@ -11,8 +11,7 @@
   - [Objectives achieved in the project](#objectives-achieved-in-the-project)
   - [Tools and technologies](#tools-and-technologies)
   - [Endpoints](#endpoints)
-- [Usage](#usage)
-- [Tests](#tests)
+- [Useful commands](#useful-commands)
 
 ## About
 
@@ -76,3 +75,90 @@ This project uses a variety of technologies and services:
 | `/summaries/:id` | **DELETE**      | **DELETE**      | delete a summary     |
 | `/ping`          | **GET**         |     ------      | get test json        |
 | `/docs`          | **GET**         |     ------      | get the docs         |
+
+## Useful commands
+
+### Build and Launch Containers
+
+```bash
+docker-compose up -d --build
+```
+
+### Accessing Database
+
+```bash
+docker-compose exec web-db psql -U postgres
+
+postgres=# \c web_dev
+postgres=# \q
+```
+
+### Update Database Schema
+
+```bash
+docker-compose exec web python app/db.py
+```
+
+### Run Tests
+
+```bash
+# normal run
+$ docker-compose exec web python -m pytest
+
+# disable warnings
+$ docker-compose exec web python -m pytest -p no:warnings
+
+# run only the last failed tests
+$ docker-compose exec web python -m pytest --lf
+
+# run only the tests with names that match the string expression
+$ docker-compose exec web python -m pytest -k "summary and not test_read_summary"
+
+# stop the test session after the first failure
+$ docker-compose exec web python -m pytest -x
+
+# enter PDB after first failure then end the test session
+$ docker-compose exec web python -m pytest -x --pdb
+
+# stop the test run after two failures
+$ docker-compose exec web python -m pytest --maxfail=2
+
+# show local variables in tracebacks
+$ docker-compose exec web python -m pytest -l
+
+# list the 2 slowest tests
+$ docker-compose exec web python -m pytest --durations=2
+
+#Run unit tests in parallel
+$ docker-compose exec web pytest -k "unit" -n auto
+```
+
+### Build container for Heroku
+
+```bash
+docker build -f src/Dockerfile.prod -t registry.heroku.com/secret-dusk-86918/web ./src
+```
+
+### Run Heroku container locally
+
+```bash
+docker run -d --name fastapi-tdd -e PORT=8765 -e DATABASE_URL=sqlite://sqlite.db -p 5003:8765 registry.heroku.com/secret-dusk-86918/web:latest
+```
+
+### Push Container to Heroku Registry
+
+```bash
+docker push registry.heroku.com/secret-dusk-86918/web:latest
+```
+
+### Build the image for GitHub
+
+```bash
+docker build -f src/Dockerfile.prod -t docker.pkg.github.com/derevenetsartyom/tdd-fastapi/summarizer:latest ./src/
+```
+
+### Push the image to the Docker registry on GitHub Packages
+
+```bash
+docker push docker.pkg.github.com/derevenetsartyom/tdd-fastapi/summarizer:latest
+```
