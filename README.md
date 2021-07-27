@@ -1,6 +1,6 @@
 # Test-Driven Development with FastAPI and Docker
 
-![Continuous Integration and Delivery](https://github.com/DerevenetsArtyom/fastapi-tdd/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+![Continuous Integration and Delivery](https://github.com/DerevenetsArtyom/tdd-fastapi/workflows/Continuous%20Integration%20and%20Delivery/badge.svg)
 
 * https://secret-dusk-86918.herokuapp.com/docs
 * https://secret-dusk-86918.herokuapp.com/summaries/
