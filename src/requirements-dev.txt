@@ -4,7 +4,7 @@
 #
 #    pip-compile src/requirements-dev.in
 #
-aerich==0.5.4
+aerich==0.5.5
     # via -r src/requirements.txt
 aiosqlite==0.16.1
     # via
@@ -91,7 +91,7 @@ iso8601==0.1.16
     # via
     #   -r src/requirements.txt
     #   tortoise-orm
-isort==5.9.2
+isort==5.9.3
     # via -r src/requirements-dev.in
 jieba3k==0.35.1
     # via
@@ -219,7 +219,7 @@ toml==0.10.2
     #   pytest-cov
 tomli==1.1.0
     # via black
-tortoise-orm==0.17.5
+tortoise-orm==0.17.6
     # via
     #   -r src/requirements.txt
     #   aerich

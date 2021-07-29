@@ -4,7 +4,7 @@
 #
 #    pip-compile src/requirements.in
 #
-aerich==0.5.4
+aerich==0.5.5
     # via -r src/requirements.in
 aiosqlite==0.16.1
     # via tortoise-orm
@@ -101,7 +101,7 @@ tinysegmenter==0.3
     # via newspaper3k
 tldextract==3.1.0
     # via newspaper3k
-tortoise-orm==0.17.5
+tortoise-orm==0.17.6
     # via
     #   -r src/requirements.in
     #   aerich
