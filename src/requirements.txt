@@ -4,7 +4,7 @@
 #
 #    pip-compile src/requirements.in
 #
-aerich==0.5.5
+aerich==0.5.8
     # via -r src/requirements.in
 aiosqlite==0.16.1
     # via tortoise-orm
