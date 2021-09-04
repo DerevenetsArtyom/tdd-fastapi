@@ -18,7 +18,7 @@ beautifulsoup4==4.9.3
     #   newspaper3k
 certifi==2021.5.30
     # via requests
-charset-normalizer==2.0.3
+charset-normalizer==2.0.4
     # via requests
 click==8.0.1
     # via
