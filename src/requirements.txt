@@ -105,7 +105,7 @@ tortoise-orm==0.17.6
     # via
     #   -r src/requirements.in
     #   aerich
-tqdm==4.61.2
+tqdm==4.62.2
     # via nltk
 typing-extensions==3.10.0.0
     # via
