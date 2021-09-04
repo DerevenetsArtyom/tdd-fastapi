@@ -3,7 +3,7 @@
 ###########
 
 # pull official base image
-FROM python:3.8.11-slim-buster as builder
+FROM python:3.9.7-slim-buster as builder
 
 # install system dependencies
 RUN apt-get update \
@@ -34,7 +34,7 @@ RUN isort . --check-only
 #########
 
 # pull official base image
-FROM python:3.8.11-slim-buster
+FROM python:3.9.7-slim-buster
 
 # create the appropriate directories
 ENV APP_HOME=/home/app/web

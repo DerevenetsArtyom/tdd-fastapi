@@ -1,5 +1,5 @@
 # pull official base image
-FROM python:3.9.2-slim-buster
+FROM python:3.9.7-slim-buster
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
