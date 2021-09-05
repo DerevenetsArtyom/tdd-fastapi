@@ -99,7 +99,7 @@ starlette==0.14.2
     # via fastapi
 tinysegmenter==0.3
     # via newspaper3k
-tldextract==3.1.0
+tldextract==3.1.2
     # via newspaper3k
 tortoise-orm==0.17.7
     # via
