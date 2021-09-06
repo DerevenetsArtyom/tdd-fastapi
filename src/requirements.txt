@@ -6,7 +6,7 @@
 #
 aerich==0.5.5
     # via -r src/requirements.in
-aiosqlite==0.16.1
+aiosqlite==0.17.0
     # via tortoise-orm
 asgiref==3.4.1
     # via uvicorn
