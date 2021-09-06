@@ -95,7 +95,7 @@ six==1.16.0
     #   requests-file
 soupsieve==2.2.1
     # via beautifulsoup4
-starlette==0.14.2
+starlette==0.16.0
     # via fastapi
 tinysegmenter==0.3
     # via newspaper3k
