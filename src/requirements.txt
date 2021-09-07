@@ -113,7 +113,7 @@ typing-extensions==3.10.0.2
     #   pydantic
 urllib3==1.26.6
     # via requests
-uvicorn==0.14.0
+uvicorn==0.15.0
     # via -r src/requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
