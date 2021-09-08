@@ -12,7 +12,7 @@ asgiref==3.4.1
     # via uvicorn
 asyncpg==0.24.0
     # via -r src/requirements.in
-beautifulsoup4==4.9.3
+beautifulsoup4==4.10.0
     # via
     #   feedfinder2
     #   newspaper3k
