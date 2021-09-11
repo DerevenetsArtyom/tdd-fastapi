@@ -4,34 +4,32 @@
 #
 #    pip-compile src/requirements-dev.in
 #
-aerich==0.5.5
+aerich==0.5.8
     # via -r src/requirements.txt
-aiosqlite==0.16.1
+aiosqlite==0.17.0
     # via
     #   -r src/requirements.txt
     #   tortoise-orm
-appdirs==1.4.4
-    # via black
 asgiref==3.4.1
     # via
     #   -r src/requirements.txt
     #   uvicorn
-asyncpg==0.23.0
+asyncpg==0.24.0
     # via -r src/requirements.txt
 attrs==21.2.0
     # via pytest
-beautifulsoup4==4.9.3
+beautifulsoup4==4.10.0
     # via
     #   -r src/requirements.txt
     #   feedfinder2
     #   newspaper3k
-black==21.7b0
+black==21.8b0
     # via -r src/requirements-dev.in
 certifi==2021.5.30
     # via
     #   -r src/requirements.txt
     #   requests
-charset-normalizer==2.0.3
+charset-normalizer==2.0.4
     # via
     #   -r src/requirements.txt
     #   requests
@@ -58,7 +56,7 @@ dictdiffer==0.9.0
     #   aerich
 execnet==1.9.0
     # via pytest-xdist
-fastapi==0.67.0
+fastapi==0.68.1
     # via -r src/requirements.txt
 feedfinder2==0.0.4
     # via
@@ -119,11 +117,13 @@ packaging==21.0
     # via pytest
 pathspec==0.9.0
     # via black
-pillow==8.3.1
+pillow==8.3.2
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-pluggy==0.13.1
+platformdirs==2.3.0
+    # via black
+pluggy==1.0.0
     # via pytest
 py==1.10.0
     # via
@@ -147,7 +147,7 @@ pypika-tortoise==0.1.1
     # via
     #   -r src/requirements.txt
     #   tortoise-orm
-pytest==6.2.4
+pytest==6.2.5
     # via
     #   -r src/requirements-dev.in
     #   pytest-cov
@@ -171,7 +171,7 @@ pyyaml==5.4.1
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-regex==2021.7.6
+regex==2021.8.28
     # via
     #   -r src/requirements.txt
     #   black
@@ -209,7 +209,7 @@ tinysegmenter==0.3
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-tldextract==3.1.0
+tldextract==3.1.2
     # via
     #   -r src/requirements.txt
     #   newspaper3k
@@ -217,26 +217,27 @@ toml==0.10.2
     # via
     #   pytest
     #   pytest-cov
-tomli==1.1.0
+tomli==1.2.1
     # via black
-tortoise-orm==0.17.6
+tortoise-orm==0.17.7
     # via
     #   -r src/requirements.txt
     #   aerich
-tqdm==4.61.2
+tqdm==4.62.2
     # via
     #   -r src/requirements.txt
     #   nltk
-typing-extensions==3.10.0.0
+typing-extensions==3.10.0.2
     # via
     #   -r src/requirements.txt
     #   aiosqlite
+    #   black
     #   pydantic
 urllib3==1.26.6
     # via
     #   -r src/requirements.txt
     #   requests
-uvicorn==0.14.0
+uvicorn==0.15.0
     # via -r src/requirements.txt
 
 # The following packages are considered to be unsafe in a requirements file:
