@@ -111,7 +111,7 @@ typing-extensions==3.10.0.2
     # via
     #   aiosqlite
     #   pydantic
-urllib3==1.26.6
+urllib3==1.26.7
     # via requests
 uvicorn==0.15.0
     # via -r src/requirements.in
