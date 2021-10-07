@@ -51,7 +51,7 @@ iso8601==0.1.16
     # via tortoise-orm
 jieba3k==0.35.1
     # via newspaper3k
-joblib==1.0.1
+joblib==1.1.0
     # via nltk
 lxml==4.6.3
     # via newspaper3k
