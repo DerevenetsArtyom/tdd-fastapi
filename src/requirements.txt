@@ -31,7 +31,7 @@ ddlparse==1.10.0
     # via aerich
 dictdiffer==0.9.0
     # via aerich
-fastapi==0.68.2
+fastapi==0.70.0
     # via -r src/requirements.in
 feedfinder2==0.0.4
     # via newspaper3k
