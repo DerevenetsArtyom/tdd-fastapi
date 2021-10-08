@@ -101,7 +101,7 @@ tinysegmenter==0.3
     # via newspaper3k
 tldextract==3.1.2
     # via newspaper3k
-tortoise-orm==0.17.7
+tortoise-orm==0.17.8
     # via
     #   -r src/requirements.in
     #   aerich
