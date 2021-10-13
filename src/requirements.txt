@@ -73,7 +73,7 @@ python-dateutil==2.8.2
     # via newspaper3k
 pytz==2021.3
     # via tortoise-orm
-pyyaml==5.4.1
+pyyaml==6.0
     # via newspaper3k
 regex==2021.10.8
     # via nltk
