@@ -57,7 +57,7 @@ lxml==4.6.3
     # via newspaper3k
 newspaper3k==0.2.8
     # via -r src/requirements.in
-nltk==3.6.4
+nltk==3.6.5
     # via newspaper3k
 pillow==8.3.2
     # via newspaper3k
