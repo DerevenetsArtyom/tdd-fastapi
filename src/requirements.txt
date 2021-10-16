@@ -59,7 +59,7 @@ newspaper3k==0.2.8
     # via -r src/requirements.in
 nltk==3.6.5
     # via newspaper3k
-pillow==8.3.2
+pillow==8.4.0
     # via newspaper3k
 pydantic==1.8.2
     # via
