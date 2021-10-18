@@ -8,6 +8,8 @@ aerich==0.5.8
     # via -r src/requirements.in
 aiosqlite==0.17.0
     # via tortoise-orm
+anyio==3.3.4
+    # via starlette
 asgiref==3.4.1
     # via uvicorn
 asyncpg==0.24.0
@@ -31,7 +33,7 @@ ddlparse==1.10.0
     # via aerich
 dictdiffer==0.9.0
     # via aerich
-fastapi==0.68.2
+fastapi==0.70.0
     # via -r src/requirements.in
 feedfinder2==0.0.4
     # via newspaper3k
@@ -45,6 +47,7 @@ h11==0.12.0
     # via uvicorn
 idna==3.3
     # via
+    #   anyio
     #   requests
     #   tldextract
 iso8601==0.1.16
@@ -93,15 +96,17 @@ six==1.16.0
     #   feedfinder2
     #   python-dateutil
     #   requests-file
+sniffio==1.2.0
+    # via anyio
 soupsieve==2.2.1
     # via beautifulsoup4
-starlette==0.14.2
+starlette==0.16.0
     # via fastapi
 tinysegmenter==0.3
     # via newspaper3k
 tldextract==3.1.2
     # via newspaper3k
-tortoise-orm==0.17.7
+tortoise-orm==0.17.8
     # via
     #   -r src/requirements.in
     #   aerich

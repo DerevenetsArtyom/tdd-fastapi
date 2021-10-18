@@ -10,6 +10,10 @@ aiosqlite==0.17.0
     # via
     #   -r src/requirements.txt
     #   tortoise-orm
+anyio==3.3.4
+    # via
+    #   -r src/requirements.txt
+    #   starlette
 asgiref==3.4.1
     # via
     #   -r src/requirements.txt
@@ -23,24 +27,24 @@ beautifulsoup4==4.10.0
     #   -r src/requirements.txt
     #   feedfinder2
     #   newspaper3k
-black==21.8b0
+black==21.9b0
     # via -r src/requirements-dev.in
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   -r src/requirements.txt
     #   requests
-charset-normalizer==2.0.4
+charset-normalizer==2.0.7
     # via
     #   -r src/requirements.txt
     #   requests
-click==8.0.1
+click==8.0.3
     # via
     #   -r src/requirements.txt
     #   aerich
     #   black
     #   nltk
     #   uvicorn
-coverage==5.5
+coverage[toml]==6.0.2
     # via pytest-cov
 cssselect==1.1.0
     # via
@@ -56,7 +60,7 @@ dictdiffer==0.9.0
     #   aerich
 execnet==1.9.0
     # via pytest-xdist
-fastapi==0.68.1
+fastapi==0.70.0
     # via -r src/requirements.txt
 feedfinder2==0.0.4
     # via
@@ -66,11 +70,11 @@ feedparser==6.0.8
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-filelock==3.0.12
+filelock==3.3.1
     # via
     #   -r src/requirements.txt
     #   tldextract
-flake8==3.9.2
+flake8==4.0.1
     # via -r src/requirements-dev.in
 gunicorn==20.1.0
     # via -r src/requirements.txt
@@ -78,9 +82,10 @@ h11==0.12.0
     # via
     #   -r src/requirements.txt
     #   uvicorn
-idna==3.2
+idna==3.3
     # via
     #   -r src/requirements.txt
+    #   anyio
     #   requests
     #   tldextract
 iniconfig==1.1.1
@@ -95,7 +100,7 @@ jieba3k==0.35.1
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-joblib==1.0.1
+joblib==1.1.0
     # via
     #   -r src/requirements.txt
     #   nltk
@@ -109,7 +114,7 @@ mypy-extensions==0.4.3
     # via black
 newspaper3k==0.2.8
     # via -r src/requirements.txt
-nltk==3.6.2
+nltk==3.6.5
     # via
     #   -r src/requirements.txt
     #   newspaper3k
@@ -117,11 +122,11 @@ packaging==21.0
     # via pytest
 pathspec==0.9.0
     # via black
-pillow==8.3.2
+pillow==8.4.0
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-platformdirs==2.3.0
+platformdirs==2.4.0
     # via black
 pluggy==1.0.0
     # via pytest
@@ -129,14 +134,14 @@ py==1.10.0
     # via
     #   pytest
     #   pytest-forked
-pycodestyle==2.7.0
+pycodestyle==2.8.0
     # via flake8
 pydantic==1.8.2
     # via
     #   -r src/requirements.txt
     #   aerich
     #   fastapi
-pyflakes==2.3.1
+pyflakes==2.4.0
     # via flake8
 pyparsing==2.4.7
     # via
@@ -153,25 +158,25 @@ pytest==6.2.5
     #   pytest-cov
     #   pytest-forked
     #   pytest-xdist
-pytest-cov==2.12.1
+pytest-cov==3.0.0
     # via -r src/requirements-dev.in
 pytest-forked==1.3.0
     # via pytest-xdist
-pytest-xdist==2.3.0
+pytest-xdist==2.4.0
     # via -r src/requirements-dev.in
 python-dateutil==2.8.2
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-pytz==2021.1
+pytz==2021.3
     # via
     #   -r src/requirements.txt
     #   tortoise-orm
-pyyaml==5.4.1
+pyyaml==6.0
     # via
     #   -r src/requirements.txt
     #   newspaper3k
-regex==2021.8.28
+regex==2021.10.8
     # via
     #   -r src/requirements.txt
     #   black
@@ -197,11 +202,15 @@ six==1.16.0
     #   feedfinder2
     #   python-dateutil
     #   requests-file
+sniffio==1.2.0
+    # via
+    #   -r src/requirements.txt
+    #   anyio
 soupsieve==2.2.1
     # via
     #   -r src/requirements.txt
     #   beautifulsoup4
-starlette==0.14.2
+starlette==0.16.0
     # via
     #   -r src/requirements.txt
     #   fastapi
@@ -214,16 +223,16 @@ tldextract==3.1.2
     #   -r src/requirements.txt
     #   newspaper3k
 toml==0.10.2
-    # via
-    #   pytest
-    #   pytest-cov
+    # via pytest
 tomli==1.2.1
-    # via black
-tortoise-orm==0.17.7
+    # via
+    #   black
+    #   coverage
+tortoise-orm==0.17.8
     # via
     #   -r src/requirements.txt
     #   aerich
-tqdm==4.62.2
+tqdm==4.62.3
     # via
     #   -r src/requirements.txt
     #   nltk
@@ -233,7 +242,7 @@ typing-extensions==3.10.0.2
     #   aiosqlite
     #   black
     #   pydantic
-urllib3==1.26.6
+urllib3==1.26.7
     # via
     #   -r src/requirements.txt
     #   requests
