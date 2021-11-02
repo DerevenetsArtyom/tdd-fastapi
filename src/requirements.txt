@@ -56,7 +56,7 @@ jieba3k==0.35.1
     # via newspaper3k
 joblib==1.1.0
     # via nltk
-lxml==4.6.3
+lxml==4.6.4
     # via newspaper3k
 newspaper3k==0.2.8
     # via -r src/requirements.in
