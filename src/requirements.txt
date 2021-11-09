@@ -78,7 +78,7 @@ pytz==2021.3
     # via tortoise-orm
 pyyaml==6.0
     # via newspaper3k
-regex==2021.10.8
+regex==2021.11.10
     # via nltk
 requests==2.26.0
     # via
