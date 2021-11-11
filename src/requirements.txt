@@ -98,7 +98,7 @@ six==1.16.0
     #   requests-file
 sniffio==1.2.0
     # via anyio
-soupsieve==2.2.1
+soupsieve==2.3.1
     # via beautifulsoup4
 starlette==0.16.0
     # via fastapi
