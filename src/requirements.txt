@@ -112,7 +112,7 @@ tortoise-orm==0.17.8
     #   aerich
 tqdm==4.62.3
     # via nltk
-typing-extensions==3.10.0.2
+typing-extensions==4.0.0
     # via
     #   aiosqlite
     #   pydantic
