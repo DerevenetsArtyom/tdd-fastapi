@@ -8,7 +8,7 @@ aerich==0.5.8
     # via -r src/requirements.in
 aiosqlite==0.17.0
     # via tortoise-orm
-anyio==3.3.4
+anyio==3.4.0
     # via starlette
 asgiref==3.4.1
     # via uvicorn
