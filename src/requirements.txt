@@ -50,7 +50,7 @@ idna==3.3
     #   anyio
     #   requests
     #   tldextract
-iso8601==0.1.16
+iso8601==1.0.2
     # via tortoise-orm
 jieba3k==0.35.1
     # via newspaper3k
