@@ -5,41 +5,41 @@
 #    pip-compile src/requirements-dev.in
 #
 aerich==0.5.8
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 aiosqlite==0.17.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tortoise-orm
 anyio==3.3.4
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   starlette
 asgiref==3.4.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   uvicorn
 asyncpg==0.24.0
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 attrs==21.2.0
     # via pytest
 beautifulsoup4==4.10.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   feedfinder2
     #   newspaper3k
 black==21.9b0
-    # via -r src/requirements-dev.in
-certifi==2021.10.8
+    # via -r requirements-dev.in
+certifi==2022.12.7
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   requests
 charset-normalizer==2.0.7
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   requests
 click==8.0.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aerich
     #   black
     #   nltk
@@ -48,43 +48,43 @@ coverage[toml]==6.0.2
     # via pytest-cov
 cssselect==1.1.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 ddlparse==1.10.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aerich
 dictdiffer==0.9.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aerich
 execnet==1.9.0
     # via pytest-xdist
 fastapi==0.70.0
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 feedfinder2==0.0.4
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 feedparser==6.0.8
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 filelock==3.3.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tldextract
 flake8==4.0.1
-    # via -r src/requirements-dev.in
+    # via -r requirements-dev.in
 gunicorn==20.1.0
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 h11==0.12.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   uvicorn
 idna==3.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   anyio
     #   requests
     #   tldextract
@@ -92,31 +92,31 @@ iniconfig==1.1.1
     # via pytest
 iso8601==0.1.16
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tortoise-orm
 isort==5.9.3
-    # via -r src/requirements-dev.in
+    # via -r requirements-dev.in
 jieba3k==0.35.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 joblib==1.1.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   nltk
 lxml==4.6.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 mccabe==0.6.1
     # via flake8
 mypy-extensions==0.4.3
     # via black
 newspaper3k==0.2.8
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 nltk==3.6.5
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 packaging==21.0
     # via pytest
@@ -124,7 +124,7 @@ pathspec==0.9.0
     # via black
 pillow==8.4.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 platformdirs==2.4.0
     # via black
@@ -138,89 +138,89 @@ pycodestyle==2.8.0
     # via flake8
 pydantic==1.8.2
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aerich
     #   fastapi
 pyflakes==2.4.0
     # via flake8
 pyparsing==2.4.7
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   ddlparse
     #   packaging
 pypika-tortoise==0.1.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tortoise-orm
 pytest==6.2.5
     # via
-    #   -r src/requirements-dev.in
+    #   -r requirements-dev.in
     #   pytest-cov
     #   pytest-forked
     #   pytest-xdist
 pytest-cov==3.0.0
-    # via -r src/requirements-dev.in
+    # via -r requirements-dev.in
 pytest-forked==1.3.0
     # via pytest-xdist
 pytest-xdist==2.4.0
-    # via -r src/requirements-dev.in
+    # via -r requirements-dev.in
 python-dateutil==2.8.2
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 pytz==2021.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tortoise-orm
 pyyaml==6.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 regex==2021.10.8
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   black
     #   nltk
 requests==2.26.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   feedfinder2
     #   newspaper3k
     #   requests-file
     #   tldextract
 requests-file==1.5.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   tldextract
 sgmllib3k==1.0.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   feedparser
 six==1.16.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   feedfinder2
     #   python-dateutil
     #   requests-file
 sniffio==1.2.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   anyio
 soupsieve==2.2.1
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   beautifulsoup4
 starlette==0.16.0
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   fastapi
 tinysegmenter==0.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 tldextract==3.1.2
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   newspaper3k
 toml==0.10.2
     # via pytest
@@ -230,24 +230,24 @@ tomli==1.2.1
     #   coverage
 tortoise-orm==0.17.8
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aerich
 tqdm==4.62.3
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   nltk
 typing-extensions==3.10.0.2
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   aiosqlite
     #   black
     #   pydantic
 urllib3==1.26.7
     # via
-    #   -r src/requirements.txt
+    #   -r requirements.txt
     #   requests
 uvicorn==0.15.0
-    # via -r src/requirements.txt
+    # via -r requirements.txt
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
